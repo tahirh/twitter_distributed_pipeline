@@ -4,9 +4,9 @@ Code repo for building streaming pipeline using twitter, kafka, spark and cassan
 
 This application has been tested on Python 3.6.3, Docker 17.12.0-ce and docker-compose 1.18.0 on Windows 10 machine. 
 
-Instructions to run the application: 
+Browse in the python folder and follow the instructions to run the application: 
 
-1) Install all python packages listed in requirements.txt
+1) Install all python packages listed in requirements.txt.
 ````
 pip install -r requirements.txt
 ````
