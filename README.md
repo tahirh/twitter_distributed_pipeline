@@ -20,5 +20,5 @@ docker exec -it cassandra-seed-node /usr/bin/env cqlsh -f /src/cassandra.cql
 ````
 7) Next, execute the command below to run the spark job and load results into the cassandra db. 
 ````
-docker-compose exec master spark-submit --jars /src/spark-streaming-kafka-0-8-assembly.jar --packages anguenot:pyspark-cassandra:0.7.0 --conf spark.cassandra.connection.host=cassandra -seed-node /src/consumer.py kafka:9092 twitter-data 2000
+docker-compose exec master spark-submit --jars /src/spark-streaming-kafka-0-8-assembly.jar --packages anguenot:pyspark-cassandra:0.7.0 --conf spark.cassandra.connection.host=cassandra-seed-node /src/consumer.py kafka:9092 twitter-data 2000
 ````
