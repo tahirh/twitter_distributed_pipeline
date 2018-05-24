@@ -1,4 +1,4 @@
-Data Challenge
+Twitter Distributed Pipeline
 
 Code repo for building streaming pipeline using twitter, kafka, spark and cassandra. 
 
@@ -22,3 +22,8 @@ docker exec -it cassandra-seed-node /usr/bin/env cqlsh -f /src/cassandra.cql
 ````
 docker-compose exec master spark-submit --jars /src/spark-streaming-kafka-0-8-assembly.jar --packages anguenot:pyspark-cassandra:0.7.0 --conf spark.cassandra.connection.host=cassandra-seed-node /src/consumer.py kafka:9092 twitter-data 2000
 ````
+
+Next steps: 
+
+- migrate to scala
+- start using Akka actor model for producer
